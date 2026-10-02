@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="az">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kitabxana — Oxu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-space="static">
+  <header class="topbar">
+    <a class="brand" href="index.html">Kitabxana</a>
+    <nav>
+      <a href="index.html">Yüklə</a>
+      <a href="library.html">Kitablarım</a>
+    </nav>
+  </header>
+
+  <main class="container reader">
+    <div class="reader-head">
+      <div>
+        <h1 id="book-title">Yüklənir…</h1>
+        <span id="book-level" class="badge"></span>
+        <span id="book-status" class="badge"></span>
+      </div>
+      <div class="reader-tools">
+        <button id="font-down" class="btn" title="Şrifti kiçilt">A−</button>
+        <button id="font-up" class="btn" title="Şrifti böyüt">A+</button>
+        <button id="mode-toggle" class="btn">Scroll rejimi</button>
+      </div>
+    </div>
+
+    <p id="notice" class="notice" hidden></p>
+
+    <article id="text" class="reader-text"></article>
+
+    <div id="pager" class="pager">
+      <button id="prev" class="btn">← Əvvəlki</button>
+      <span id="page-info"></span>
+      <button id="next" class="btn">Növbəti →</button>
+    </div>
+  </main>
+
+  <script src="js/space.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/reader.js"></script>
+</body>
+</html>

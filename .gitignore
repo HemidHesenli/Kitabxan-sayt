@@ -1,0 +1,12 @@
+# Gizli açarlar — heç vaxt yükləməyin
+.env
+
+# npm install ilə yenidən qurulur
+node_modules/
+
+# Köhnə kopyalar
+ehtiyat/
+
+# Tərcümə alətinin nəticələri
+*.az.docx
+*.az.pdf

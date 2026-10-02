@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="az">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kitabxana — Kitab yüklə</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-hero">
+  <header class="topbar">
+    <a class="brand" href="index.html">Kitabxana</a>
+    <nav>
+      <a href="index.html" class="active">Yüklə</a>
+      <a href="library.html">Kitablarım</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <h1 class="hero-title">Yeni bir səhifə</h1>
+    <p class="hero-sub">Kitabını yüklə — onu sadə ingilis dilində, öz səviyyəndə oxu.</p>
+
+    <form id="upload-form" class="prompt-form">
+      <div id="dropzone" class="prompt" data-orbit>
+        <input id="file-input" type="file" accept=".pdf,.docx" hidden>
+        <label for="file-input" id="dropzone-text" class="prompt-text">Kitabı bura sürüşdür və ya seçmək üçün klikləyin…</label>
+        <input id="title-input" class="prompt-title" type="text" placeholder="Kitabın adı" maxlength="200" aria-label="Kitabın adı">
+
+        <div class="prompt-bar">
+          <label for="file-input" class="icon-btn" title="Fayl seç (PDF, DOCX)" aria-label="Fayl seç">+</label>
+          <div class="prompt-right">
+            <div class="levels" role="radiogroup" aria-label="Tərcümə səviyyəsi">
+              <label class="level-option" title="Ən sadə dil">
+                <input type="radio" name="level" value="B1" checked>
+                <span>B1</span>
+              </label>
+              <label class="level-option" title="Bir az zəngin leksika">
+                <input type="radio" name="level" value="B2">
+                <span>B2</span>
+              </label>
+            </div>
+            <button id="submit-btn" type="submit" class="send-btn" disabled aria-label="Yüklə və saxla" title="Yüklə və saxla">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2c.4 4.9 2.6 8.6 10 10-7.4 1.4-9.6 5.1-10 10-.4-4.9-2.6-8.6-10-10 7.4-1.4 9.6-5.1 10-10z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <p class="hint">PDF, DOCX · <strong>B1</strong> — ən sadə dil · <strong>B2</strong> — bir az zəngin leksika</p>
+      <p id="status" class="status" role="status"></p>
+    </form>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+  <script src="js/space.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/extract.js"></script>
+  <script src="js/translate.js"></script>
+  <script src="js/upload.js"></script>
+</body>
+</html>
